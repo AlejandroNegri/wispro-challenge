@@ -1,33 +1,30 @@
 import React from "react";
 import "./App.css";
-import { connect } from "react-redux";
 import {
-  increaseCounter,
-  decreaseCounter,
-} from "./store/actions/counterActions"
+  BrowserRouter as Router,
+  Switch,
+  Route,
+
+} from "react-router-dom";
+import Login from "./pages/LoginPage";
+import Users from "./pages/UsersPage";
 
 
-function App(props) {
+export default function App(props) {
   return (
-    <div className="App">
-      <div>Count: {props.count}</div>
-      <button onClick={() => props.increaseCounter()}>Increase Count</button>
-      <button onClick={() => props.decreaseCounter()}>Decrease Count</button>
-    </div>
+    <Router> 
+      <Switch>
+        <Route path="/users">
+          <Users />
+        </Route>
+        <Route path="/">
+          <Login />
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 
-const mapStateToProps = state => {
-  return {
-    count: state.counter.count,
-  }
-}
 
-const mapDispatchToProps = dispatch => {
-  return {
-    increaseCounter: () => dispatch(increaseCounter()),
-    decreaseCounter: () => dispatch(decreaseCounter()),
-  }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+

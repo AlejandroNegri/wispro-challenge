@@ -1,0 +1,69 @@
+.users-page {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f2ef;
+}
+
+.header {
+  background-color: white;
+  border-bottom: darkgrey 1px solid;
+}
+
+.main-area {
+  display: flex;
+  margin: 25px;
+  width: 100%;
+}
+
+.table-area {
+  border: darkgrey 1px solid;
+  padding: 25px;
+  border-radius: 25px;
+  background: white;
+}
+
+.graphics-area {
+  width: 100%;
+}
+
+.graphics-label {
+  margin-left: 55px;
+}
+
+.right-area {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+.map-area {
+  height: 100%;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.map-marker {
+  font-size: 25px;
+  color: red;
+}
+
+.header-right-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.map-switch {
+  display: flex;
+  flex-direction: row;
+  margin-right: 25px;
+  padding-top: 5px;
+}
+
+.switch-icons {
+  font-size: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
